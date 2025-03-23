@@ -1,87 +1,70 @@
----
-dataset_name: "Home Loan Approval Dataset"
-pretty_name: "Home Loan Approval Dataset"
-license: "MIT"
-task_categories:
-  - financial-analysis
-  - risk-assessment
-  - credit-scoring
-language:
-  - en
-size_categories:
-  - 10K< rows
-tags:
-  - home-loan
-  - credit-score
-  - finance
-  - risk-analysis
-  - machine-learning
-  - banking
-num_rows: 50
-dataset_repo: "SivaMallikarjun/Home-Loan-Approval-Dataset"
----
-
-# Home Loan Approval Dataset Repository
+# Module: AI-Driven Pharma Batch Approval System
 
 ## Overview
-This repository contains structured data for analyzing and predicting home loan approvals based on various financial and creditworthiness metrics. The dataset is designed for use in financial analysis, machine learning, and risk assessment models.
+This module automates the batch approval process in pharmaceutical manufacturing. It evaluates raw materials, production parameters, equipment validation, quality assurance, and delivery status to generate an automated approval certificate based on industry standards (USFDA, WHO, EU-GMP).
 
-## Repository Structure
+## Features
+- **Batch Yield & Efficiency Calculation**: Computes input material vs. output API yield.
+- **Equipment Calibration & Validation**: Ensures precise calculations for flow rates, RPM, pressure differentials, and temperature monitoring.
+- **OEE (Overall Equipment Effectiveness) Tracking**: Measures Availability, Performance, and Quality to optimize efficiency.
+- **HVAC & Clean Room Compliance**: Monitors airflow velocity, HEPA filter pressure differentials, and particulate matter count.
+- **Water System Validation**: Checks TOC, Conductivity, pH levels, and microbial contamination.
+- **Energy & Utility Optimization**: Estimates steam, compressed air, and power consumption for cost control.
 
-- `data/`
-  - `loan_applications.csv` - Contains applicant details and loan request information.
-  - `income_verification.csv` - Provides details on multiple income sources for applicants.
-  - `credit_scores.csv` - Includes credit scores from different agencies.
-  
-- `documentation/`
-  - `data_dictionary.md` - Detailed explanation of dataset fields.
-  - `README.md` - Overview of dataset purpose and usage instructions.
+## System Requirements
+- **Programming Language**: Python 3.8+
+- **Libraries**:
+  - Gradio
+  - Pandas
+  - NumPy
+  - Datetime
+- **Development Environment**:
+  - Visual Studio Code / PyCharm
+  - Jupyter Notebook (optional)
 
-## Dataset Fields
-
-### `loan_applications.csv`
-| Application_ID | Applicant_Name | Age | Marital_Status | Dependents | Employment_Type | Years_Employed | Primary_Income | Passive_Income | Debt_Obligations | Loan_Amount_Requested | Loan_Term | Loan_Purpose | Property_Value | Credit_Score | Repayment_Worthiness_Score | Approval_Status |
-|---------------|---------------|-----|----------------|------------|----------------|----------------|----------------|----------------|----------------|----------------------|----------|-------------|---------------|--------------|---------------------------|----------------|
-| 1001         | John Doe      | 35  | Married        | 2          | Full-time      | 10             | 80,000         | 5,000          | 20,000          | 250,000               | 30       | House Purchase | 300,000        | 720          | 85                        | Approved       |
-| 1002         | Jane Smith    | 29  | Single         | 0          | Self-employed  | 5              | 60,000         | 12,000         | 10,000          | 180,000               | 20       | Refinance      | 220,000        | 680          | 75                        | Approved       |
-| 1003         | Mark Johnson  | 40  | Married        | 3          | Part-time      | 15             | 40,000         | 3,000          | 5,000           | 150,000               | 25       | Other          | 200,000        | 650          | 65                        | Rejected       |
-
-### `income_verification.csv`
-| Application_ID | Primary_Income_Source | Rental_Income | Dividend_Income | Other_Investments |
-|---------------|----------------------|--------------|----------------|-----------------|
-| 1001         | Salary/Wages         | 2,000        | 1,000          | 2,000           |
-| 1002         | Business Profits     | 5,000        | 3,000          | 4,000           |
-| 1003         | Hourly Wages         | 1,000        | 500            | 1,000           |
-
-### `credit_scores.csv`
-| Application_ID | Credit_Agency | Credit_Score | Score_Date |
-|---------------|--------------|--------------|------------|
-| 1001         | Equifax      | 720          | 2025-01-01 |
-| 1002         | Experian     | 680          | 2025-01-02 |
-| 1003         | TransUnion   | 650          | 2025-01-03 |
-
-## Dataset Creation
-
-### Curation Rationale
-The dataset has been curated to provide insights into home loan approval processes, helping financial institutions assess loan risk based on multiple factors such as income, creditworthiness, and debt obligations.
-
-### Source Data
-This dataset is a synthetic representation of real-world home loan applications, designed for research and educational purposes.
-
-### Data Producers
-The dataset has been generated for analytical and machine learning use cases in the banking and finance sector.
-
-## Bias, Risks, and Limitations
-This dataset may not reflect real-world biases in lending decisions. Users should be mindful of ethical considerations when using the data for predictive modeling.
-
-## Usage Instructions
+## Installation
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/SivaMallikarjun/home-loan-approval-dataset.git
+   ```sh
+   git clone https://github.com/your-repo/pharma-batch-approval.git
+   cd pharma-batch-approval
    ```
-2. Load the CSV files into a data processing tool (Python, SQL, etc.).
-3. Use this dataset for home loan risk analysis and machine learning models.
+2. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+3. Run the application:
+   ```sh
+   python app.py
+   ```
+
+## Usage
+- Launch the Gradio interface and input the following:
+  - **Raw Material Status** (Verified/Not Verified)
+  - **Production Parameters** (Optimized/Not Optimized)
+  - **Equipment Check** (Calibrated/Not Calibrated)
+  - **Quality Parameters** (Meets Specifications/Not Met)
+  - **Delivery Status** (Ready/Not Ready)
+- The system will generate:
+  - **Final Batch Approval Status** (Approved/Rejected)
+  - **Auto-Generated Approval Certificate**
+
+## Expected Output
+### Example Certificate:
+```
+Pharma Batch Approval Certificate
+----------------------------------
+Date: 2025-03-23 10:20:50
+Raw Material Approval: Pass
+Production Approval: Pass
+Equipment Approval: Pass
+Quality Approval: Pass
+Delivery Approval: Pass
+Final Batch Status: Approved
+```
 
 ## License
-This dataset is available under a public license for research and educational purposes.
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+For any issues or contributions, contact **Siva Mallikarjun Parvatham** at **sivamallikarjun2601@gmail.com**.
 
